@@ -34,12 +34,12 @@ Como o projeto é executado inteiramente no lado do cliente (Client-side) no nav
 
 1. Clone este repositório para o seu computador:
    ```bash
-   git clone https://github.com/[seu-usuario]/[nome-do-repositorio].git
+   git clone https://github.com/pedroaguiarcd/dog-breed-gallery
    ```
 
 2. Acesse a pasta do projeto:
    ```bash
-   cd [nome-do-repositorio]
+   cd [dog-breed-gallery]
    ```
 
 3. Abra o arquivo `index.html` em qualquer navegador web moderno de sua preferência (Chrome, Firefox, Edge, Safari).
