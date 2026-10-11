@@ -1,0 +1,34 @@
+.app-container {
+    display: flex;
+    min-height:  100vh;
+    gap: 20px;
+    overflow: hidden;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 280px;
+    overflow-y: auto;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 10px;
+}
+
+
+.app-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: 2px solid #ccc;
+    padding: 5px;
+    margin-bottom: 20px;
+}

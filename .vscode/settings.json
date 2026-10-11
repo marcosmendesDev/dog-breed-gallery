@@ -1,0 +1,5 @@
+{
+    "liveServer.settings.NoBrowser": true,
+    "liveServer.settings.CustomBrowser": "firefox",
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "firefox"
+}
