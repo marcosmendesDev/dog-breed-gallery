@@ -1,38 +1,49 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Galeria de Raças de Cães</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="data:," />
   </head>
   <body>
     <header class="app-header">
-      <h1>Galeria de Raças de caẽs</h1>
+      <h1>Galeria de Raças de Cães</h1>
     </header>
 
     <div class="app-container">
+      <!-- PAINEL LATERAL (SIDEBAR) -->
       <aside class="sidebar">
-        <!--painel lateral -->
-        <h2 id="racas-subtitlte">Raças</h2>
+        <h2>Raças Disponíveis</h2>
 
-        <form action="" method="get">
-          <input type="text" name="" id="pesquisa" />
-          <button id="botao">Buscar</button>
+        <!-- Formulário de Busca/Filtro -->
+        <form id="form-busca">
+          <input type="text" id="pesquisa" placeholder="Buscar raça ou sub-raça..." />
+          <button type="submit" id="botao">Buscar</button>
         </form>
 
+        <!-- Contador de Raças -->
+        <p id="total-racas" class="texto-contador"></p>
+
+        <!-- Mensagens de Feedback/Erro da Busca -->
         <p id="mensagem"></p>
 
-        <ul id="Lista Raças"></ul>
-        <!--as raças serao exibidas aqui com js -->
+        <!-- Container onde o JavaScript vai injetar os CARDS de Raças/Sub-raças -->
+        <div id="list-breeds"></div>
       </aside>
+
+      <!-- ÁREA PRINCIPAL (VISUALIZADOR) -->
       <main class="main-content">
-        <img src="" alt="" id="img" />
+        <h2 id="titulo-main">Selecione uma raça para visualizar</h2>
+        
+        <!-- Mensagem de estado inicial ou carregamento -->
+        <p id="status-imagem">Nenhuma raça selecionada no momento.</p>
+
+        <!-- Elemento de Imagem -->
+        <img src="" alt="Imagem do cachorro pesquisado" id="img" style="display: none;" />
       </main>
     </div>
-
-    <img src="" alt="" id="img" />
 
     <script src="./script.js"></script>
   </body>
