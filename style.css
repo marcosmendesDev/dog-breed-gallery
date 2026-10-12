@@ -3,7 +3,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
 }
 
 body {
@@ -49,26 +55,27 @@ body {
 }
 
 /* Formulário de Busca */
-#form-busca {
+#search-form {
   display: flex;
   gap: 8px;
   margin-bottom: 12px;
 }
 
-#pesquisa {
+#search-input {
   flex: 1;
   padding: 8px 12px;
+  min-width: 0;
   border: 1px solid #cbd5e1;
   border-radius: 6px;
   font-size: 0.9rem;
   outline: none;
 }
 
-#pesquisa:focus {
+#search-input:focus {
   border-color: #2563eb;
 }
 
-#botao {
+#search-button {
   padding: 8px 16px;
   background-color: #f1f5f9;
   border: 1px solid #cbd5e1;
@@ -77,18 +84,18 @@ body {
   font-size: 0.9rem;
 }
 
-#botao:hover {
+#search-button:hover {
   background-color: #e2e8f0;
 }
 
 /* Textos informativos */
-.texto-contador {
+.counter-text {
   font-size: 0.85rem;
   color: #64748b;
   margin-bottom: 16px;
 }
 
-#mensagem {
+#message {
   font-size: 0.9rem;
   margin-bottom: 12px;
   font-weight: 500;
@@ -102,21 +109,35 @@ body {
 }
 
 /* Card individual da Raça */
-.card-raca {
+.breed-card {
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   padding: 12px;
   margin-bottom: 10px;
   background-color: #ffffff;
-  transition: border-color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-.card-raca:hover {
+.breed-card:hover {
   border-color: #cbd5e1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.reload {
+  color: #010101;
+  display: flex;
+  justify-content: right;
+  align-items: end;
+  padding: 8px 16px;
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
 }
 
 /* Botão principal da Raça */
-.btn-raca {
+.breed-btn {
   width: 100%;
   text-align: left;
   background: transparent;
@@ -125,29 +146,47 @@ body {
   font-weight: 600;
   color: #0f172a;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.breed-btn:hover {
+  color: #2563eb;
+}
+
+/* Badge com contagem de sub-raças */
+.badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: #e2e8f0;
+  color: #475569;
+  padding: 2px 8px;
+  border-radius: 12px;
 }
 
 /* Bloco das Sub-raças */
-.subracas-container {
+.subbreeds-container {
   margin-top: 10px;
   padding-top: 10px;
   border-top: 1px solid #f1f5f9;
 }
 
-.subracas-container p {
+.subbreeds-container p {
   font-size: 0.8rem;
   color: #64748b;
   margin-bottom: 8px;
+  font-weight: 500;
 }
 
-.botoes-sub {
+.sub-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
 }
 
 /* Botões pequenos (Chips) das Sub-raças */
-.btn-sub {
+.sub-btn {
   background-color: #f8fafc;
   border: 1px solid #cbd5e1;
   border-radius: 6px;
@@ -158,7 +197,7 @@ body {
   transition: all 0.2s ease;
 }
 
-.btn-sub:hover {
+.sub-btn:hover {
   background-color: #2563eb;
   color: #ffffff;
   border-color: #2563eb;
@@ -178,23 +217,57 @@ body {
   align-items: flex-start;
 }
 
-#titulo-main {
+/* Coloca o Título e o Botão Recarregar lado a lado */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* Transforma o container das fotos em um Grid (lado a lado) */
+#image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  width: 100%;
+  margin-top: 12px;
+}
+
+/* Define o tamanho uniforme de cada foto da galeria */
+#image-gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#main-title {
   font-size: 1.25rem;
   margin-bottom: 12px;
   color: #0f172a;
 }
 
-#status-imagem {
+#image-status {
   color: #64748b;
 }
 
 /* Imagem do Cachorro */
-#img {
-  max-width: 100%;
-  max-height: 450px;
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 180px;
   border-radius: 8px;
   object-fit: cover;
-  margin-top: 16px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  align-self: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  background-color: #e2e8f0;
 }
